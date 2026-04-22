@@ -1,0 +1,23 @@
+class Estudiante:
+    def __init__(self, nombre, edad):
+        self._nombre = nombre
+        self._edad = edad
+        self._notas = []
+
+    def agregar_nota(self, nota):
+        if 0 <= nota <= 10:
+            self._notas.append(nota)
+
+    def calcular_promedio(self):
+        if not self._notas:
+            return 0
+        return sum(self._notas) / len(self._notas)
+
+estudiante1 = Estudiante("Dylan", 20)
+
+estudiante1.agregar_nota(10)
+estudiante1.agregar_nota(8)
+estudiante1.agregar_nota(9)
+
+print("Estudiante:", estudiante1._nombre)
+print("Promedio final:", estudiante1.calcular_promedio())
