@@ -1,0 +1,20 @@
+class Libro:
+    def __init__(self, titulo, autor, año_publicacion):
+        self._titulo = titulo
+        self._autor = autor
+        self._año_publicacion = año_publicacion
+
+    def obtener_descripcion(self):
+        return f"{self._titulo} de {self._autor}"
+
+    def es_clasico(self):
+        return (2026 - self._año_publicacion) > 50
+
+libro1 = Libro("Don quijote", "nose", 1867)
+libro2 = Libro("Por mil 67", " Rubio random", 2025)
+
+print(libro1.obtener_descripcion())
+print("¿Es clásico?:", libro1.es_clasico())
+
+print(libro2.obtener_descripcion())
+print("¿Es clásico?:", libro2.es_clasico())
