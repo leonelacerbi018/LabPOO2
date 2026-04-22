@@ -1,0 +1,24 @@
+class Persona:
+    def __init__(self, nombre, edad, sexo):
+        self._nombre = nombre
+        self._edad = edad
+        self._sexo = sexo
+
+    def set_edad(self, nueva_edad):
+        if nueva_edad >= 0:
+            self._edad = nueva_edad
+        else:
+            print("Error: La edad no puede ser negativa.")
+
+    def mostrar_informacion(self):
+        return f"Nombre: {self._nombre}, Edad: {self._edad}, Sexo: {self._sexo}"
+
+if __name__ == "__main__":
+    persona1 = Persona("Lucía", 25, "Femenino")
+    
+    print(persona1.mostrar_informacion()) 
+    
+    persona1.set_edad(30)
+    
+    print("Después del cambio:")
+    print(persona1.mostrar_informacion())
