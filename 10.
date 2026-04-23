@@ -1,0 +1,20 @@
+class Circulo:
+    def __init__(self, radio):
+        if radio >= 0:
+            self._radio = radio10.
+        else:
+            print("Error: El radio no puede ser negativo. Se fijará en 0.")
+            self._radio = 0
+
+    def calcular_area(self):
+        return 3.1416 * (self._radio ** 2)
+
+    def calcular_circunferencia(self):
+        return 2 * 3.1416 * self._radio
+
+c1 = Circulo(5)
+c2 = Circulo(-3)
+
+print(f"Área del círculo 1: {c1.calcular_area()}")
+print(f"Circunferencia del círculo 1: {c1.calcular_circunferencia()}")
+print(f"Radio del círculo 2: {c2._radio}")
