@@ -1,0 +1,26 @@
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self._nombre = nombre
+        self._precio = precio
+        self._stock = stock
+
+    def aumentar_stock(self, cantidad):
+        if cantidad > 0:
+            self._stock += cantidad
+
+    def disminuir_stock(self, cantidad):
+        if 0 < cantidad <= self._stock:
+            self._stock -= cantidad
+        else:
+            print("Error: Stock insuficiente o cantidad inválida")
+
+    def mostrar_stock(self):
+        print(f"Producto: {self._nombre} | Stock actual: {self._stock}")
+
+prod = Producto("Palo golpeador de parejas felices", 25, 10)
+
+prod.aumentar_stock(5)
+prod.disminuir_stock(3)
+prod.disminuir_stock(20)
+
+prod.mostrar_stock()
