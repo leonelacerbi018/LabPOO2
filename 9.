@@ -1,0 +1,20 @@
+class Juego:
+    def __init__(self, nombre, genero, precio):
+        self._nombre = nombre
+        self._genero = genero
+        self._precio = precio
+
+    def mostrar_info(self):
+        print(f"Juego: {self._nombre} | Género: {self._genero} | Precio: ${self._precio}")
+
+    def en_oferta(self, precio_limite):
+        return self._precio < precio_limite
+
+mi_juego = Juego("Metal Slug", "Acción y disparos", 0.25)
+
+mi_juego.mostrar_info()
+
+if mi_juego.en_oferta(0.10):
+    print("¡El juego está en oferta!")
+else:
+    print("El juego tiene precio normal.")
